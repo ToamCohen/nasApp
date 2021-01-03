@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom"
-
-export function NavBarLinks(props){
-    const {link, name} = props
+import '../Styles/Navbar.css'
+export function NavBarLinks(props) {
+    const { link, name } = props
     return (
-        <div>
-            <Link to={link}>{name}</Link>
-        </div>
+
+        <li>
+            <Link to={link} style={{ display: 'inline-block' }}>{name}</Link>
+        </li>
+
+
+
     )
 }

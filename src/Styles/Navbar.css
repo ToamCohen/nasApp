@@ -1,0 +1,35 @@
+.navbar-container{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color:rgb(151, 151, 151);
+    box-shadow: 4em rgba(48, 46, 46, 0.5);
+}
+
+ul{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7em;
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+    font-size: 1.7em;
+    color: white;
+}
+
+.logo{
+    display:grid;
+    justify-content:end;
+}
+
+.img-logo{
+    height: 4em;
+    width:auto;
+    border-radius:10em;
+}
+
+.navbar-content {
+    display:grid;
+    align-items: center;
+}

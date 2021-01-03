@@ -1,0 +1,98 @@
+.home-container{
+    display:grid;
+    justify-items: center;
+    background-color:rgb(175, 171, 171)
+}
+
+.home-title{
+    font-size:3.5em;
+    font-weight:bold;
+    color:rgb(255, 255, 255);
+}
+
+.home-image{
+    width:27em;
+    height: 27em;
+    border-radius:1.8em;
+    box-shadow:rgb(32, 32, 32) 4em
+}
+
+.home-video{
+    width:60em;
+    height: 70em;
+}
+
+.home-p{
+    max-width: 32em;
+    text-align:center;
+    font-size: 1.3em;
+    font-weight:lighter;
+    line-height: 1.8em;
+}
+.search-container{
+    display:grid;
+    justify-items: center;
+    background-color:rgb(175, 171, 171)
+}
+
+.search-title{
+    text-align: center;
+    font-size:2em
+}
+.search-content-container{
+    display:grid;
+    justify-items:center;
+}
+
+.search-image{
+    border-radius: 4em;
+    width: 20em;
+    height: 20em;
+}
+
+
+.search-button{
+    color:white;
+    cursor:pointer;
+    margin:2em;
+
+}
+
+.search-button :active {
+    color:rgb(8, 53, 150)
+}
+
+.favorites-container{
+    background-color: rgb(175, 171, 171);
+
+}
+
+.favorite-title{
+    margin: 0px;
+    margin-bottom: 0.8em;
+    font-size: 2.3em;
+    color: rgb(0, 0, 0);
+}
+
+.favorite-content{
+    display:grid;
+    justify-items: center;
+}
+
+.favorite-image{
+    border-radius: 4em;
+    width: 20em;
+    height: 20em;
+}
+
+.favorite-button{
+    color: white;
+    margin-bottom: 1.4em;
+    cursor: pointer;
+}
+
+.favorite-button:active {
+    color:red;
+}
+
+

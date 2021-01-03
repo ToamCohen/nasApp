@@ -15,7 +15,7 @@ export function Favorites(props) {
 
     const removeFromFavorites = async (id) => {
         await axios.delete(`http://localhost:8080/favorites/${id}`)
-        const index = favoriteImages.indexOf(f => f._id === id)
+        const index = favoriteImages.findIndex(f => f._id === id)
         const favorites = [...favoriteImages]
         favorites.splice(index, 1)
         setFavoriteImages(favorites)

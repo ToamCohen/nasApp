@@ -6,7 +6,7 @@ export function SearchBar(props){
 
     return(
         <div>
-            <input type="search" onChange={({target}) => handleInput(target.value) } />
+            <input className='search-input'  type="search" onChange={({target}) => handleInput(target.value) } />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { MediaCard } from "./MediaCard"
 import { SearchBar } from "./SearchBar"
+import '../Styles/Search.css'
 
 
 export function Search(props) {
@@ -24,8 +25,11 @@ export function Search(props) {
     }
 
     return (
-        <div>
-            <SearchBar key="searchBar" handleInput={handleInput} />
+        <div className="search-color" >
+            <h1>Find your star</h1>
+            <div className='input-container'>
+                <SearchBar key="searchBar" handleInput={handleInput} />
+            </div>
             <MediaCard
                 key={searchData.map(key => key.imgURL)}
                 searchData={searchData}
