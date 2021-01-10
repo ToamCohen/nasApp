@@ -29,6 +29,7 @@
     font-weight:lighter;
     line-height: 1.8em;
 }
+
 .search-container{
     display:grid;
     justify-items: center;
@@ -95,4 +96,33 @@
     color:red;
 }
 
+body{
+    background-color:rgb(175, 171, 171)
+}
 
+.favorite-image-container{
+    display:grid;
+    justify-items: center;
+    background-color:rgb(175, 171, 171)
+}
+
+.favorite-image-title{
+    font-size:3.5em;
+    font-weight:bold;
+    color:rgb(255, 255, 255);
+}
+
+.favorite-image-content{
+    width:30em;
+    height: 27em;
+    border-radius:1.8em;
+    box-shadow:rgb(32, 32, 32) 4em
+}
+
+.image-description{
+    max-width: 32em;
+    text-align:center;
+    font-size: 1.3em;
+    font-weight:lighter;
+    line-height: 1.8em;
+}

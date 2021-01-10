@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export function NavBar() {
     const links = [
-        { link: "/home", linkName: "Home" },
+        { link: "/", linkName: "Home" },
         { link: "/search", linkName: "Search" },
         { link: "/favorites", linkName: "Favorites" }
     ]
@@ -16,12 +16,12 @@ export function NavBar() {
         <div className='navbar-container' >
             <div className='navbar-content' >
                 <ul>
-                {links.map(link => <NavBarLinks key={link.linkName} link={link.link} name={link.linkName} />)}
+                    {links.map(link => <NavBarLinks key={link.linkName} link={link.link} name={link.linkName} />)}
                 </ul>
             </div>
             <div className='logo'>
-                <Link to="/home" >
-                    <img className='img-logo' src='https://cdn.mos.cms.futurecdn.net/baYs9AuHxx9QXeYBiMvSLU.jpg' />
+                <Link to="/" >
+                    <img className='img-logo' src='https://cdn.mos.cms.futurecdn.net/baYs9AuHxx9QXeYBiMvSLU.jpg' alt='' />
                 </Link>
             </div>
         </div>

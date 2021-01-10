@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
 import { MediaCard } from "./MediaCard"
+import {FavoriteDesc} from "./FavoriteDesc"
 
 export function Favorites(props) {
     const [favoriteImages, setFavoriteImages] = useState([])
@@ -21,20 +22,9 @@ export function Favorites(props) {
         setFavoriteImages(favorites)
     }
 
-    const showDetails = (image) => {
-        setImageDetails(image)
-        return(
-            <div>
-                idan
-            </div>
-        )
-    }
-
-
     return (
         <div>
             <MediaCard
-                showDetails={showDetails}
                 match={props.match}
                 removeFromFavorites={removeFromFavorites}
                 favoriteImages={favoriteImages} />

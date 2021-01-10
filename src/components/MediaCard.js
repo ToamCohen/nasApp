@@ -2,8 +2,8 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import { Link } from 'react-router-dom';
 import '../Styles/MediaCard.css'
-export function MediaCard(props) {
 
+export function MediaCard(props) {
 
     const rendering = () => {
         if (props.APOD) {
@@ -33,7 +33,7 @@ export function MediaCard(props) {
                         return (
                             <div className='search-content-container'>
                                 <h2 className="search-title">{star.title}</h2>
-                                <img className='search-image' src={star.imgURL} />
+                                <img className='search-image' src={star.imgURL} alt='' />
                                 <div className='search-button-container' >
                                     <span className='search-button' onClick={() => addToFavorite(star)}><ThumbUpIcon /></span>
                                 </div>
@@ -43,8 +43,7 @@ export function MediaCard(props) {
                 </div>
             )
         } else if (props.favoriteImages) {
-            const { showDetails, favoriteImages, removeFromFavorites } = props
-            console.log(favoriteImages)
+            const { favoriteImages, removeFromFavorites } = props
             return (
                 <div className="favorites-container">
                     {favoriteImages.map(favImage => {
@@ -54,7 +53,7 @@ export function MediaCard(props) {
                                     {favImage.title}
                                 </h2>
                                 <Link to={`/favorites/${favImage._id}`} >
-                                    <img className="favorite-image" onClick={() => showDetails(favImage)} src={favImage.imgURL} alt="" />
+                                    <img className="favorite-image" onClick={() => {}} src={favImage.imgURL} alt="" />
                                 </Link>
                                 <div className="favorite-button">
                                     <span onClick={() => removeFromFavorites(favImage._id)}><ThumbDownIcon /></span>
@@ -64,6 +63,26 @@ export function MediaCard(props) {
                     })}
                 </div>
             )
+        }else if(props.favoriteImage){
+            const {title, description, imgURL} = props.favoriteImage
+            return (
+                <div className="favorite-image-container">
+                        <h2 className="favorite-image-title">
+                            {title}
+                        </h2>
+
+                        <div>
+                            <img className="favorite-image-content" src={imgURL} alt="" />
+                        </div>
+
+                        <div className='container-descreption-p' >
+                            <p className='image-description'>
+                                {description}
+                            </p>
+                        </div>
+                </div>
+            )
+            
         } else {
             <div>null</div>
         }

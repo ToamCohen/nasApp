@@ -7,8 +7,6 @@ export function NavBarLinks(props) {
         <li>
             <Link to={link} style={{ display: 'inline-block' }}>{name}</Link>
         </li>
-
-
-
+        
     )
 }

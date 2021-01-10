@@ -14,7 +14,6 @@ export function Home(props){
         })
     },[])
 
-
     return(
         <div>
             <MediaCard APOD={APOD} />
